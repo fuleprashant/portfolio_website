@@ -135,10 +135,10 @@ const Navbar = () => {
         </ul>
       </div>
       <div className=" rounded-4xl flex gap-5" onClick={handlePopup}>
-        <NavLink>
+        <NavLink to="https://github.com/fuleprashant">
           <BsGithub size={36} />
         </NavLink>
-        <NavLink>
+        <NavLink to="https://in.linkedin.com/in/fule-prashant-5513a5283">
           <LiaLinkedin size={36} />
         </NavLink>
       </div>

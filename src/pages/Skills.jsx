@@ -352,10 +352,7 @@ const Skills = () => {
           {selectedTech[tech.name] && (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
               {tech.value.map((val) => (
-                <div
-                  key={val.id}
-                  className="text-center border p-5 hover:bg-blue-600"
-                >
+                <div key={val.id} className="text-center border p-5 ">
                   <img src={val.path} alt="" className="h-30 w-30 mx-auto " />
                   <h2 className="text-3xl">{val.title}</h2>
                   <h5 className="mt-5">{val.description}</h5>

@@ -19,7 +19,7 @@ const Intro = () => {
           <img
             src={man}
             alt="Developer"
-            className="h-[400px] lg:h-[600px] mt-5 z-20 transform transition-transform duration-400 hover:scale-105"
+            className="h-[400px] lg:h-[600px] mt-5 z-20 transform transition-transform duration-400 hover:scale-105 "
           />
         </div>
 
