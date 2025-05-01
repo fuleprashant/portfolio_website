@@ -38,7 +38,7 @@ const App = () => {
   ]);
 
   return (
-    <div>
+    <div className=" text-black">
       <RouterProvider router={router}></RouterProvider>
     </div>
   );

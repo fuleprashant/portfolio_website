@@ -16,8 +16,9 @@ import express from "../images/express.png";
 
 import mysql from "../images/mysql.png";
 import mongodb from "../images/mongodb.png";
-import { FaMinus } from "react-icons/fa6";
-import { FaPlus } from "react-icons/fa";
+// import { FaMinus } from "react-icons/fa6";
+// import { FaPlus } from "react-icons/fa";
+import { FiChevronDown, FiChevronRight, FiChevronUp } from "react-icons/fi";
 
 // const response = {
 //   frontend: [
@@ -215,45 +216,53 @@ const response = [
       {
         id: 1,
         path: html,
+        title: "HTML",
         description: "HTML is a structure to build the website",
         technology: "frontend",
       },
       {
         id: 2,
         path: css,
+        title: "CSS",
         description: "CSS is used for styling the structure of the website",
       },
       {
         id: 3,
         path: javascript,
+        title: "JAVASCRIPT",
         description: "JavaScript is used to add interactivity to the website",
       },
       {
         id: 4,
         path: tailwindcss,
+        title: "Tailwindcss",
         description:
           "Tailwind CSS is a utility-first CSS framework for creating custom designs",
       },
       {
         id: 5,
         path: react,
+        title: "React",
         description:
           "React is a JavaScript library for building user interfaces",
       },
       {
         id: 6,
         path: redux,
+        title: "Redux",
         description:
           "Redux is a state management tool for JavaScript applications",
       },
       {
         id: 7,
         path: reacthookform,
+        title: "reacthookform",
         description: "React Hook Form is a library for handling forms in React",
       },
       {
         id: 8,
         path: formik,
+        title: "formik",
         description:
           "Formik is a form library for React to handle form validation and state",
       },
@@ -265,12 +274,14 @@ const response = [
       {
         id: 1,
         path: node,
+        title: "node",
         description:
           "Node.js is a JavaScript runtime environment for server-side programming",
       },
       {
         id: 2,
         path: express,
+        title: "express",
         description: "Express.js is a web application framework for Node.js",
       },
     ],
@@ -281,12 +292,14 @@ const response = [
       {
         id: 1,
         path: mongodb,
+        title: "mongodb",
         description:
           "MongoDB is a NoSQL database that stores data in JSON-like format",
       },
       {
         id: 2,
         path: mysql,
+        title: "mysql",
         description:
           "MongoDB is a SQL database that stores data in table format",
       },
@@ -296,7 +309,11 @@ const response = [
 console.log(response[2]);
 
 const Skills = () => {
-  const [selectedTech, setSelectedTech] = useState({});
+  const [selectedTech, setSelectedTech] = useState({
+    frontend: false,
+    backend: false,
+    database: false,
+  });
   console.log("selectedtech is", selectedTech);
 
   // {
@@ -307,7 +324,7 @@ const Skills = () => {
 
   return (
     <div>
-      <div className="text-2xl text-center mt-5">Skills</div>
+      <div className="text-2xl text-center mt-5 p-5 ">Skills</div>
 
       {response.map((tech, idx) => (
         <div key={idx} className="bg-white mb-5 rounded-lg overflow-hidden">
@@ -322,19 +339,20 @@ const Skills = () => {
           >
             {console.log("_+++_", selectedTech[tech.name])}
             {selectedTech[tech.name] ? (
-              <FaMinus size={24} />
+              <FiChevronDown size={24} />
             ) : (
-              <FaPlus size={24} />
+              <FiChevronRight size={24} />
             )}
 
             <p className="font-mono text-2xl">{tech.name}</p>
           </div>
           {selectedTech[tech.name] && (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
               {tech.value.map((val) => (
                 <div key={val.id} className="text-center border p-5">
                   <img src={val.path} alt="" className="h-30 w-30 mx-auto " />
-                  <h5>{val.description}</h5>
+                  <h2 className="text-3xl">{val.title}</h2>
+                  <h5 className="mt-5">{val.description}</h5>
                 </div>
               ))}
             </div>

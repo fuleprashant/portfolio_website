@@ -5,12 +5,12 @@ import Footer from "../components/Footer";
 
 const FirstLayout = () => {
   return (
-    <div className="container mx-auto flex flex-col min-h-screen relative bg-[url('/images/bgimage.jfif')] bg-cover bg-center bg-no-repeat ">
-      <div className="sticky top-0 h-">
+    <div className="container mx-auto flex flex-col relative">
+      <div className="sticky top-0 z-20">
         <Navbar />
       </div>
       <hr />
-      <main className="flex-1 bg-white">
+      <main className="bg-white  ">
         <Outlet />
       </main>
       <hr />
