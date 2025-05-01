@@ -188,20 +188,20 @@ const About = () => {
     <div>
       <div className="absolute inset-0 bg-gradient-to-r from-blue-100 via-grey-300 to-blue-700 opacity-30"></div>
 
-      <div className="relative z-10 mt-14 m-5 p-5">
-        <div className="ml-5 md:ml-0 text-xl md:text-2xl text-left font-mono">
+      <div className="relative z-10 mt-14 m-5 p-5 ">
+        <div className="ml-5 md:ml-0 text-xl md:text-2xl text-left font-mono transform transition-transform duration-800 hover:scale-105">
           NAME : Fule Prashant B.{" "}
           <span className="font-mono text-red-700">React Developer</span>
         </div>
-        <li className="mx-5 md:mx-0 text-left text-xl md:text-2xl mt-5">
+        <li className="mx-5 md:mx-0 text-left text-xl md:text-2xl mt-5 transform transition-transform duration-800 hover:scale-105">
           A passionate React.js Developer who loves crafting smooth and dynamic
           web experiences.
         </li>
-        <li className="mx-5 md:mx-0 text-left text-xl md:text-2xl mt-5">
+        <li className="mx-5 md:mx-0 text-left text-xl md:text-2xl mt-5 transform transition-transform duration-800 hover:scale-105">
           I have 1.5+ years of experience in React.js and JavaScript. Currently
           I work at Technobrain Business Solution, located in Ahmedabad.
         </li>
-        <li className="mx-5 md:mx-0 text-left text-xl md:text-2xl mt-5">
+        <li className="mx-5 md:mx-0 text-left text-xl md:text-2xl mt-5 transform transition-transform duration-800 hover:scale-105">
           My role is to build frontend parts of web applications, integrate
           APIs, collaborate with backend developers and testers, and ensure
           responsive design.
@@ -220,7 +220,7 @@ const About = () => {
               return (
                 <div
                   key={index}
-                  className="w-full h-full bg-white mx-auto border-black border p-4 text-left"
+                  className="w-full h-full bg-white mx-auto border-black border p-4 text-left transform transition-transform duration-800 hover:scale-105"
                 >
                   <img
                     src={project.image}

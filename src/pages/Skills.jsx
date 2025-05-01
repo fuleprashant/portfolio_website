@@ -327,7 +327,10 @@ const Skills = () => {
       <div className="text-2xl text-center mt-5 p-5 ">Skills</div>
 
       {response.map((tech, idx) => (
-        <div key={idx} className="bg-white mb-5 rounded-lg overflow-hidden">
+        <div
+          key={idx}
+          className="bg-white mb-5 rounded-lg overflow-hidden transform transition-transform duration-800 "
+        >
           <div
             className="bg-blue-100 flex items-center gap-5 p-5 cursor-pointer"
             onClick={() =>
@@ -349,7 +352,10 @@ const Skills = () => {
           {selectedTech[tech.name] && (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
               {tech.value.map((val) => (
-                <div key={val.id} className="text-center border p-5">
+                <div
+                  key={val.id}
+                  className="text-center border p-5 hover:bg-blue-600"
+                >
                   <img src={val.path} alt="" className="h-30 w-30 mx-auto " />
                   <h2 className="text-3xl">{val.title}</h2>
                   <h5 className="mt-5">{val.description}</h5>

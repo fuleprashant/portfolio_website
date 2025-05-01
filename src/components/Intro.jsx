@@ -11,14 +11,19 @@ const Intro = () => {
       ></div>
       <div className="flex flex-col lg:flex-row w-full  items-center justify-center gap-8">
         <div className="w-full lg:w-1/2 flex justify-center items-center">
+          {/* <img
+            src={man}
+            alt="Developer"
+            className="h-[400px] lg:h-[600px] mt-5 z-20 hover:scale-3d"
+          /> */}
           <img
             src={man}
             alt="Developer"
-            className="h-[400px] lg:h-[600px] mt-5 z-10"
+            className="h-[400px] lg:h-[600px] mt-5 z-20 transform transition-transform duration-400 hover:scale-105"
           />
         </div>
 
-        <div className="w-full lg:w-1/2 text-center space-y-6 z-10">
+        <div className="w-full lg:w-1/2 text-center space-y-6 z-10 transform transition-transform duration-800 hover:scale-105">
           <h4 className="text-2xl text-gray-600">Hello, it's me</h4>
           <h1 className="text-4xl font-bold text-gray-800">Fule Prashant</h1>
           <h2 className="text-2xl text-gray-700">

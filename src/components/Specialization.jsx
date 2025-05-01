@@ -70,7 +70,7 @@ const specializationData = [
 
 const Specialization = () => {
   return (
-    <div className="relative mb-5">
+    <div className="relative mb-5 ">
       <div className="absolute inset-0 bg-gradient-to-l from-blue-200 via-gray-300 to-blue-300 opacity-30 rounded-3xl"></div>
 
       <div className="p-5 text-5xl font-bold text-center my-5">
@@ -81,7 +81,7 @@ const Specialization = () => {
         {specializationData.map(({ label, img }) => (
           <div
             key={label}
-            className="flex flex-col text-center items-center border-[3px] border-blue-400 p-8 m-5 rounded-tl-[40px] rounded-br-[40px]"
+            className="flex flex-col text-center items-center border-[3px] border-blue-400 p-8 m-5 rounded-tl-[40px] rounded-br-[40px] transform transition-transform duration-800 hover:scale-110"
           >
             <img src={img} alt={label} className="w-80 h-50" />
             <div className="text-4xl mt-2">{label}</div>

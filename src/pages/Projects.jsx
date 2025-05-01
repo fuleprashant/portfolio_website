@@ -169,12 +169,12 @@ const Projects = () => {
         className="absolute inset-0 bg-gradient-to-l from-gray-100 via-grey-300 to-blue-300 opacity-30"
         // style={{ backgroundImage: `url(${bg2})` }}
       ></div>
-      <div className="relative h-full">
+      <div className="relative h-full ">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 p-5">
           {projectList.map((project, index) => (
             <div
               key={index}
-              className="bg-blue-100 p-4 rounded-lg shadow-md hover:shadow-lg h-auto space-y-5"
+              className="bg-blue-100 p-4 rounded-lg shadow-md hover:shadow-lg h-auto space-y-5  transform transition-transform duration-800 hover:scale-105"
             >
               <h3 className="text-xl font-semibold text-gray-800">
                 s Project name = {project.name}
